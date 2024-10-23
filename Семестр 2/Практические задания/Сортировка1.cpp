@@ -13,7 +13,7 @@ void Сортировка1::run() {
     // Сортировка
     sort_by_salary(await_enter_or_escape_input("Сортировка по зарплате: Enter - по возрастанию, Space - по убыванию"));
 
-    // Запись отсортированного списка сотрудников в новый файл и из этого файла
+    // Запись отсортированного списка сотрудников в новый файл и из этого файла
     write_employees_to_file(employees, FILE_PATH_OUTPUT);
     println("Сотрудники успешно отсортированы и записаны:");
     println(read_file(FILE_PATH_OUTPUT));

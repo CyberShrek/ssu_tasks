@@ -1,11 +1,11 @@
 #ifndef СОРТИРОВКА2_H
 #define СОРТИРОВКА2_H
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Сортировка2 : public AbstractTask
+class Сортировка2 : public AbstractSolution
 {
 public:
-    Сортировка2(): AbstractTask(__FILE__){};
+    Сортировка2(): AbstractSolution(__FILE__){};
     void run() override;
 
     // Генерирует матрицу размером n x n в файл

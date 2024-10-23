@@ -14,7 +14,7 @@ void Сортировка2::run() {
     sort_matrix(await_enter_or_escape_input("Сортировка: Enter - по возрастанию, Space - по убыванию"));
     transpose_matrix();
 
-    // Запись отсортированной матрицы в новый файл
+    // Запись отсортированной матрицы в новый файл
     write_matrix_to_file(matrix, FILE_PATH_OUTPUT);
     println("Матрица успешно отсортирована и записана:");
     println(read_file(FILE_PATH_OUTPUT));

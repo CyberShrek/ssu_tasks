@@ -1,10 +1,10 @@
 #ifndef ФУНКЦИИ_H
 #define ФУНКЦИИ_H
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Функции : public AbstractTask{
+class Функции : public AbstractSolution{
 public:
-    Функции(): AbstractTask(__FILE__){};
+    Функции(): AbstractSolution(__FILE__){};
     void run() override;
 
     // Вычисляет сумму простых чисел для указанного количества знаков числа

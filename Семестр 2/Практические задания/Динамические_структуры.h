@@ -1,11 +1,11 @@
 #ifndef ДИНАМИЧЕСКИЕ_СТРУКТУРЫ_H
 #define ДИНАМИЧЕСКИЕ_СТРУКТУРЫ_H
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Динамические_структуры final : public AbstractTask
+class Динамические_структуры final : public AbstractSolution
 {
 public:
-    Динамические_структуры(): AbstractTask(__FILE__){};
+    Динамические_структуры(): AbstractSolution(__FILE__){};
     void run() override;
 
     // Возвращает все слова, которые не заканчиваются на заданную букву, в заданном стеке

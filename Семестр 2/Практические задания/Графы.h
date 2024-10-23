@@ -1,12 +1,12 @@
 #ifndef ГРАФЫ_H
 #define ГРАФЫ_H
 
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Графы final : public AbstractTask
+class Графы final : public AbstractSolution
 {
 public:
-    Графы(): AbstractTask(__FILE__) {}
+    Графы(): AbstractSolution(__FILE__) {}
     void run() override;
 
     // Возвращает количество вершин, смежных с указанной вершиной, у неориентированного графа

@@ -1,10 +1,10 @@
 #ifndef СОРТИРОВКА1_H
 #define СОРТИРОВКА1_H
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Сортировка1 final : public AbstractTask{
+class Сортировка1 final : public AbstractSolution{
 public:
-    Сортировка1(): AbstractTask(__FILE__) {};
+    Сортировка1(): AbstractSolution(__FILE__) {};
     void run() override;
 
     // Описание сотрудника

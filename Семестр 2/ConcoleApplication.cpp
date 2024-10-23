@@ -1,5 +1,5 @@
 #pragma once
-#include "Практические задания/AbstractTask.cpp"
+#include "Практические задания/AbstractSolution.cpp"
 #include "Практические задания/STL1.cpp"
 #include "Практические задания/STL2.cpp"
 #include "Практические задания/Графы.cpp"
@@ -10,13 +10,13 @@
 #include "Практические задания/Сортировка2.cpp"
 #include "Практические задания/Функции.cpp"
 
-class TasksApplication
+class ConcoleApplication
 {
 public:
-    TasksApplication() {
+    ConcoleApplication() {
         // Получение заданий
         acquire_tasks();
-        println("Получен список заданий");
+        println("Получен список решений");
     };
 
     // Запуск программы
@@ -26,14 +26,14 @@ public:
     };
 
     // Уничтожает объекты коллекции заданий
-    ~TasksApplication() {
-        for (AbstractTask* task : tasks) {
+    ~ConcoleApplication() {
+        for (AbstractSolution* task : tasks) {
             delete task;
         }
     };
 
 private:
-    vector<AbstractTask*> tasks{};
+    vector<AbstractSolution*> tasks{};
 
     void acquire_tasks() {
         tasks.push_back(new STL1());
@@ -48,7 +48,7 @@ private:
     }
 
     void open_tasks_menu() const {
-        println("Задания:");
+        println("Решения:");
         for (int i = 0; i < tasks.size(); i++) {
             println(to_string(i + 1) + ". " + tasks[i]->get_name());
         }
@@ -57,10 +57,10 @@ private:
             ]);
     }
 
-    static void open_task(const AbstractTask* task) {
+    static void open_task(const AbstractSolution* task) {
         println(task->to_text());
         while(await_enter_or_escape_input("Нажмите Enter для запуска программы, или Escape для возврата в меню")) {
-            const_cast<AbstractTask *>(task)->run();
+            const_cast<AbstractSolution *>(task)->run();
         }
     }
 };

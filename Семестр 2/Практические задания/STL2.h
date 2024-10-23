@@ -1,12 +1,12 @@
 #ifndef STL2_H
 #define STL2_H
 
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class STL2 final : public AbstractTask
+class STL2 final : public AbstractSolution
 {
 public:
-    STL2(): AbstractTask(__FILE__) {}
+    STL2(): AbstractSolution(__FILE__) {}
     void run() override;
 
     // Возвращает множество цифр, которые встречаются только в двузначных числах

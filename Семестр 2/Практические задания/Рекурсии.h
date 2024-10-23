@@ -1,10 +1,10 @@
 #ifndef РЕКУРСИИ_H
 #define РЕКУРСИИ_H
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Рекурсии : public AbstractTask{
+class Рекурсии : public AbstractSolution{
 public:
-    Рекурсии(): AbstractTask(__FILE__){};
+    Рекурсии(): AbstractSolution(__FILE__){};
     void run() override;
 
     // Вычисляет факториал числа

@@ -1,33 +1,33 @@
-#ifndef ABSTRACT_TASK_H
-#define ABSTRACT_TASK_H
+#ifndef ABSTRACT_SOLUTION_H
+#define ABSTRACT_SOLUTION_H
 
 using namespace std;
 
-// Абстрактный класс, позволяющий упростить работу с заданиями.
-class AbstractTask
+// Абстрактный класс, позволяющий упростить работу с моими решениями.
+class AbstractSolution
 {
 public:
 
     // Запускает реализованную по заданию программу
     virtual void run() = 0;
 
-    // Возвращает имя задания
+    // Возвращает название
     virtual string get_name() const;
 
     // Возвращает описание и решение задания
     virtual string to_text() const;
 
-    virtual ~AbstractTask() = default;
+    virtual ~AbstractSolution() = default;
 
 protected:
 
     // Требует макрос __FILE__ в аргументе для вычисления пути файла производного класса.
-    explicit AbstractTask(const string& _file_);
+    explicit AbstractSolution(const string& _file_);
 
 private:
-    // Название задания
+    // Название
     string name{};
-    // Описание задания
+    // Описание
     string description{};
     // Исходный код заголовка
     string header{};

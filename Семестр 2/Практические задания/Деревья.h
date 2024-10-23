@@ -2,12 +2,12 @@
 #define ДЕРЕВЬЯ_H
 #include <vector>
 
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class Деревья final : public AbstractTask
+class Деревья final : public AbstractSolution
 {
 public:
-    Деревья(): AbstractTask(__FILE__){}
+    Деревья(): AbstractSolution(__FILE__){}
     void run() override;
 
     // Узел дерева

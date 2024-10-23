@@ -1,12 +1,12 @@
 #ifndef STL1_H
 #define STL1_H
 
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-class STL1 final : public AbstractTask
+class STL1 final : public AbstractSolution
 {
 public:
-    STL1(): AbstractTask(__FILE__) {}
+    STL1(): AbstractSolution(__FILE__) {}
     void run() override;
 
     // Вычисляет сумму элементов, не попадающих в заданный интервал [a, b]

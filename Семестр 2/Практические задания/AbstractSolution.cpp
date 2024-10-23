@@ -1,6 +1,6 @@
-#include "AbstractTask.h"
+#include "AbstractSolution.h"
 
-AbstractTask::AbstractTask(const string& _file_) {
+AbstractSolution::AbstractSolution(const string& _file_) {
 
     // Путь к файлу класса без расширения
     string non_ext_path = _file_.substr(0, _file_.find_last_of('.'));
@@ -12,11 +12,11 @@ AbstractTask::AbstractTask(const string& _file_) {
     implementation = read_file(non_ext_path + ".cpp");
 }
 
-string AbstractTask::get_name() const {
+string AbstractSolution::get_name() const {
     return name;
 }
 
-string AbstractTask::to_text() const {
+string AbstractSolution::to_text() const {
     return "\tЗадание \"" + name + "\":\n"+ description
     + "\n\n\tРешение:\n\n"
     + "    ///////////\n"

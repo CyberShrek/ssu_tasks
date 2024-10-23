@@ -10,14 +10,13 @@
 #include <codecvt>
 #include <functional>
 #include "util/all.h"
-#include "Практические задания/AbstractTask.h"
-#include "TasksApplication.cpp"
+#include "ConcoleApplication.cpp"
 
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    TasksApplication().run();
+    ConcoleApplication().run();
     return 0;
 }
 
